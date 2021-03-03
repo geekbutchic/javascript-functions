@@ -7,6 +7,7 @@ result1;
 const result2 = triple('is the best ');
 result2;
 
+// ----------------------------------------------- //
 squared = (num) => {
     return Math.sqrt(num);
 }
@@ -16,12 +17,17 @@ hipToBeSquare1;
 const hipToBeSquare2 = squared(4);
 hipToBeSquare2;
 
+// ----------------------------------------------- //
+
 getFirstCharacter = (str) => {
     return str[0];
 }
 
 const firstName = getFirstCharacter('Sonny');
 firstName;
+
+// ----------------------------------------------- //
+
 
 getLastCharacter = (str) => {
     return str[str.length - 1];
@@ -30,12 +36,16 @@ getLastCharacter = (str) => {
 const last = getLastCharacter('Lance Armstrong');
 last;
 
+// ----------------------------------------------- //
+
 getOneCharacter = (str, i) => {
     return str[i];
 }
 
 const oneChar = getOneCharacter('The One', 6);
 oneChar;
+
+// ----------------------------------------------- //
 
 getTwoCharacters = (str, index1, index2) => {
     return str[index1] + ' ' + str[index2];
@@ -44,6 +54,8 @@ getTwoCharacters = (str, index1, index2) => {
 const twoChars = getTwoCharacters('Hey You', 0, 4);
 twoChars;
 
+// ----------------------------------------------- //
+
 makeCapitalized = (str) => {
     return str.toUpperCase();
 }
@@ -51,11 +63,76 @@ makeCapitalized = (str) => {
 const makeCaps = makeCapitalized('help me');
 makeCaps;
 
+// ----------------------------------------------- //
+
 getInitials = (str) => {
     str = str[0] + '.' + str[str.indexOf(' ') + 1] + '.';
-    
+
     return str.toUpperCase();
 }
 
 const initials = getInitials('sonny valenzuela');
 initials;
+
+// ----------------------------------------------- //
+
+isItMedium = (str) => {
+    if (str.length >= 10 && str.length <= 20) {
+        return "That's a regular sized string!";
+    }
+}
+
+const medium1 = isItMedium("I'm 21 chars long!!!!");
+medium1;
+const medium2 = isItMedium("I'm Medium");
+medium2
+
+// ----------------------------------------------- //
+
+descendingOrder = (n) => parseFloat(n.toString().split('').reverse().join('')) * Math.sign(n)
+
+const result = descendingOrder(464736599);
+result;
+
+// ----------------------------------------------- //
+
+fizzy = (num) => {
+    if (num % 15 === 0) {
+        return "FizzBuzz";
+    } else if (num % 5 ===0) {
+        return "Buzz";
+    } else if (num % 3 === 0) {
+        return "Fizz";
+    } else {
+        return num;
+    }
+}
+
+const fizzBuzz = fizzy(15);
+fizzBuzz;
+
+// Alternative Method by Appending
+
+fizzyAlt = (num) => {
+    let result = "";
+    if (num % 3 === 0) {
+        result = result + "Fizz";
+    }
+    if (num % 5 === 0) {
+        result = result + "Buzz";
+    }
+    if (result === "") {
+        result = num;
+    }
+    return result;
+}
+
+const fizzBuzz1 = fizzyAlt(100);
+fizzBuzz1;
+
+// ----------------------------------------------- //
+
+even_or_odd = (num) => { return (num % 2 === 0) ? 'Even' : 'Odd' };
+
+const suspense = evenOrOdd(2);
+suspense;
