@@ -105,4 +105,14 @@ if (num % 15 === 0)
 ```javascript 
 return (number % 2 === 0) ? 'Even' : 'Odd';
 ```
-
+### Function Name: `oneThruTwenty` | Code Line 
+* Function prints out numbers from 1-20.
+* Second prints out numbers 1-20 that are divisible by 3.
+```javascript 
+for (let i = 1; i <= 20; i++)
+```
+### Function Name: `sentence` | Code Line: 152
+* Function prints out the characters passed into individually.
+```javascript 
+for (value of str) -> for of loop 
+```
